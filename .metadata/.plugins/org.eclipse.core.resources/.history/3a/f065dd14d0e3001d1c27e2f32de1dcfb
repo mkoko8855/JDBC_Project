@@ -1,0 +1,9 @@
+package com.java.user.domain;
+
+public enum Grade {
+	/*여긴 class로 만든게 아니라 eNum으로 만들었다.*/
+	VIP, GOLD, SILVER, BRONZE, 
+	
+	
+	
+}

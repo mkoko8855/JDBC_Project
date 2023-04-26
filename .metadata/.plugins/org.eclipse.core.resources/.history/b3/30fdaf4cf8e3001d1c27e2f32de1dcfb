@@ -1,0 +1,15 @@
+package com.java.movie.repository;
+
+import com.java.common.DataBaseConnection;
+
+public class MovieRepository {
+
+	
+	private DataBaseConnection connection = DataBaseConnection.getInstance();
+	
+	
+	
+	
+	
+	
+}

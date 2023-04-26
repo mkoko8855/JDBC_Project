@@ -1,0 +1,61 @@
+package com.java.order.service;
+
+import com.java.common.AppService;
+import static com.java.view.AppUI.*;
+public class OrderService implements AppService {
+
+	
+	
+	@Override
+	public void start() {
+		
+		orderManagementScreen();
+		int selection = inputInteger();
+		
+		switch (selection) {
+		case 1:
+			
+			break;
+
+		case 2:
+			
+			break;
+			
+		case 3:
+			
+			return;
+			
+		default:
+			System.out.println("메뉴를 다시 입력하세요.");
+		}
+		System.out.println("\n====== 계속 진행하시려면 ENTER를 누르세요 ======");
+		inputString();
+	}
+	
+	
+	/* DVD 대여 서비스 비즈니스 로직*/
+	private void processOrderDvd() {
+		/*안쪽에서 메뉴를 한번 더 제공하겠다*/
+		while(true) {
+			System.out.println("\n=============== 대여 관리 시스템을 실행합니다. ===============");
+			System.out.println("[ 1. 대여 가능 DVD 목록 보기 | 2. 대여중인 영화 반납예정일 확인 | 3. 이전으로 돌아가기 ]");
+			/*1번은 렌탈 값이 true인걸 가져오면 되는거지, 2번은 회원을 한명 선택을 해야겠지? 그 회원이 대여중인 영화가 어떤 것인지 파악하기 위해 번호를 알아야지. orderhistory테이블을 보면 user_number가 1번이야. 그럼 1번 회원이 어떤 영화를 빌렸는지 정보가 나와있잖아. 즉, return_date값을 조회하면되지.*/
+			System.out.println(">>> ");
+		
+		
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

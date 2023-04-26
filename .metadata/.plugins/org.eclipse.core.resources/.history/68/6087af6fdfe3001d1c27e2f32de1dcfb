@@ -1,0 +1,64 @@
+package com.java.user.repository;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import com.java.common.DataBaseConnection;
+import com.java.user.domain.User;
+
+public class UserRepository {
+
+	DataBaseConnection connection = DataBaseConnection.getInstance(); /*받자*/
+
+	/*변수 3개준비*/
+	Connection conn = null; 
+	PreparedStatement pstmt = null; /* 얜 상속이 되니까 AutoCloseable이다. */
+	ResultSet rs = null;
+	
+	
+	public void addUser(User user) {
+		
+		/*user클래스에서 오버라이딩한 다음 주소값이 아닌 실값이 뭔지 확인하자*/
+		System.out.println("repository: " + user); 
+		String sql = "INSERT INTO users (user_number, user_name, user_phone) VALUES(users_seq.NEXTVAL, ?, ?)";
+		
+		
+		
+		
+		
+	
+		
+		
+		
+		/*받았으니 커넥션 타입의 변수를 준비*/
+		try {
+			conn = connection.getConnection(); /*메서드받고*/
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, user.getUserName());
+			pstmt.setString(2, user.getPhoneNumber());
+			
+			if(pstmt.executeUpdate() == 1) { /*확인과정임. 나중에는 무조건 되야하니 안씀.*/
+				System.out.println("회원 가입이 정상 처리되었습니다.");
+			} else {
+				System.out.println("회원 가입에 실패 했습니다. 관리자에게 문의하세요.");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} /*finally를 써야하지만, 생략할 수 있는 문법을 쓰자*/
+		  /*
+		  finally 대신에 try with Resources 라는 문법이 있다.
+		  자바 1.8 이후에 사용할 수 있는 문법이다.
+		  try문에 자원 객체를 전달하면, try가 끝날 경우
+		  자동으로 자원을 종료해주는 기능이다. (즉, finally에서 따로 close()안해도 된다.)
+		  아무 객체나 close를 해주는 것은 아니다.
+		  자원을 종료하려는 객체가 AutoCloseable 이라는 인터페이스의 구현체여야만 한다.
+		  */
+		  
+		
+	}
+	
+	
+	
+}

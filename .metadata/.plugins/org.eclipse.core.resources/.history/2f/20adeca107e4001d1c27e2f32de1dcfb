@@ -1,0 +1,14 @@
+package com.java.order.domain;
+
+public class Order {
+
+	/* 오라클의 order 테이블 보면서 작성하면 편함 */
+	
+	
+	private int orderNo;
+	private int userNumber;
+	
+	
+	
+	
+}

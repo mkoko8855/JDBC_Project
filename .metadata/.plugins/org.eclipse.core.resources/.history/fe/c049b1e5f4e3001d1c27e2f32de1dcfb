@@ -1,0 +1,45 @@
+package com.java.movie.domain;
+
+import java.time.LocalDateTime;
+
+public class Movie {
+
+	
+	private int serialNumber;
+	private String movieName;
+	private String nation;
+	private LocalDateTime pubYear;
+	private boolean rental;
+	
+	
+	/*게터세터만들기 전에 기본생성자*/
+	public Movie() {
+	}
+
+
+	public Movie(int serialNumber, String movieName, String nation, LocalDateTime pubYear, boolean rental) {
+		super();
+		this.serialNumber = serialNumber;
+		this.movieName = movieName;
+		this.nation = nation;
+		this.pubYear = pubYear;
+		this.rental = rental;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+	
+

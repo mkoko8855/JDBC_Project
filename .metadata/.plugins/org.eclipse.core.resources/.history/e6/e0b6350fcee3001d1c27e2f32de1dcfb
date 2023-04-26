@@ -1,0 +1,21 @@
+package com.java.main;
+
+import com.java.view.AppUI;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		/*이제 사용자가 프로그램을 종료시켜달라고 얘기할떄까지 프로그램이 계속 진행이 되어야 겠지*/
+		while(true) {
+			AppUI.startScreen(); /*DVD대여관리시스템이 바로 출력이 되겠지~*/
+		}
+		
+		
+		
+		
+		
+		
+		
+	}
+}

@@ -1,0 +1,60 @@
+package com.java.common;
+
+import java.sql.Connection;
+
+public class DataBaseConnection {
+
+	
+	/*여기다가 DB연동 다 쓸 것이다.*/
+	
+	
+	/*싱글톤 디자인 패턴으로 객체 하나 만들어서 다 돌려쓰면 편하겠지.*/
+	/*싱글톤 디자인 패턴은 객체를 생성하는 역할은 생성자를 막아야겠지 외부에서 보이지 않게. 프라이빗으로. 이게 첫번쨰 순서*/
+	
+	private DataBaseConnection() {
+		/*막았다. 기본생성자 생성 후 퍼블릭을 프라이빗으로.*/
+		
+		/*그리고 생성자가 호출이 되면 커넥터드라이버를 호출을 시켜 놓을 것이다.*/
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	
+	/*이제 객체를 단 하나만 생성한 다음 외부에서 객체를 요구한다면 그 객체만 따로 처리하면 되겠다.*/
+	private static DataBaseConnection connection = new DataBaseConnection();
+	
+	
+	public DataBaseConnection getInstance() {
+		return connection; 
+	}
+	
+	
+	
+	
+	/*Connection 객체를 리턴하는 메서드를 하나 선언하자*/
+	/*이 메서드가 객체의 핵심이되겠다. */
+	private Connection getConnection() {
+		/*커넥션 객체를 받아와서 리턴을 해 줄 예정이다*/
+		/*어차피 객체생성되면 드라이버는 연동이 되어 있으니*/
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String uid = "hr";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

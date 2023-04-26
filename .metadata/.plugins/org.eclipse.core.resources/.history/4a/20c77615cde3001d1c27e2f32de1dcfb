@@ -1,0 +1,12 @@
+package com.java.view;
+
+import java.util.Scanner;
+
+public class AppUI {
+
+	
+	private static Scanner sc = new Scanner(System.in);
+	
+	
+	
+}

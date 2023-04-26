@@ -1,0 +1,28 @@
+package com.java.order.service;
+
+import com.java.common.AppService;
+import static com.java.view.AppUI.*;
+public class OrderService implements AppService {
+
+	
+	
+	@Override
+	public void start() {
+		
+		orderManagementScreen();
+		int selection = inputInteger();
+		
+		
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,25 @@
+package com.java.user.repository;
+
+import com.java.user.domain.User;
+
+public class UserRepository {
+
+	
+	public void addUser(User user) {
+		
+		/*user클래스에서 오버라이딩한 다음 주소값이 아닌 실값이 뭔지 확인하자*/
+		System.out.println("repository: " + user); 
+		
+		
+		
+		
+		
+		/*커넥션 타입의 변수를 하나 준비하자*/
+		DataBaseConnection.getInstance();
+		
+		
+		
+	}
+	
+	
+}

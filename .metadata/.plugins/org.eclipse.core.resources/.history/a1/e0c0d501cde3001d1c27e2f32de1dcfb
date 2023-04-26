@@ -1,0 +1,10 @@
+package com.java.view;
+
+public class AppUI {
+
+	
+	private static Scanner sc = new Scanner(System.in)l;
+	
+	
+	
+}

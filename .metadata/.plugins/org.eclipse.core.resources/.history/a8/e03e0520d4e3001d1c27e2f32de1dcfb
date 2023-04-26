@@ -1,0 +1,14 @@
+package com.java.common;
+
+public interface AppService {
+
+	/*인터페이스다.*/
+	
+	void start();
+	
+	
+	
+	
+	
+	
+}

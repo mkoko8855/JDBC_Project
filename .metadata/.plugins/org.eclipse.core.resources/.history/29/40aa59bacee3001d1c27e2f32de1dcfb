@@ -1,0 +1,37 @@
+package com.java.main;
+
+public class AppController {
+	
+	/*시스템을 정해주는 기능이다.*/
+	/*메서드하나선언부터해보자*/
+	public void chooseSystem(int selectNumber) { /*매개값으로는 selectNumber를 받는다.*/
+		/*1,2,3,4말고 다른것도 올 수 있으니*/
+		switch(selectNumber){
+		case 1:
+			
+			break;
+		case 2:
+			
+			break;
+		case 3:
+			
+			break;
+		case 4:
+		
+			break;
+		
+		
+		
+		
+		
+		
+		}
+		
+		
+		
+		
+	}
+	
+	
+	
+}

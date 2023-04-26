@@ -1,0 +1,18 @@
+package com.java.common;
+
+public class DataBaseConnection {
+
+	
+	/*여기다가 DB연동 다 쓸 것이다.*/
+	
+	
+	/*싱글톤 디자인 패턴으로 객체 하나 만들어서 다 돌려쓰면 편하겠지.*/
+	/*싱글톤 디자인 패턴은 객체를 생성하는 역할은 생성자를 막아야겠지 외부에서 보이지 않게. 프라이빗으로. 이게 첫번쨰 순서*/
+	
+	private DataBaseConnection() {
+		/*막았다. 프라이빗으로.*/
+	}
+	
+	
+	
+}

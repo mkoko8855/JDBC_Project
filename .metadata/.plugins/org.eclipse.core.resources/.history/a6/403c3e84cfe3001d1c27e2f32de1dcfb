@@ -1,0 +1,5 @@
+package com.java.user.domain;
+
+public class User {
+	/* 테이블이 가지고 있는 속성과 1:1로 매칭이 되도록 변수를 설정할 예정이다. */
+}

@@ -1,0 +1,17 @@
+package com.java.movie.service;
+
+import com.java.common.AppService;
+
+public class MovieService implements AppService {
+
+	
+	@Override
+	public void start() {
+		
+	}
+	
+	
+	
+	
+	
+}

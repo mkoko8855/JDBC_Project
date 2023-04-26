@@ -1,0 +1,32 @@
+package com.java.main;
+
+public class AppController {
+	
+	/*시스템을 정해주는 기능이다.*/
+	/*메서드하나선언부터해보자*/
+	public void chooseSystem(int selectNumber) { /*매개값으로는 selectNumber를 받는다.*/
+		/*1,2,3,4말고 다른것도 올 수 있으니*/
+		switch(selectNumber){
+		case 1:
+			
+			break;
+		case 2:
+			
+			break;
+		case 3:
+			
+			break;
+		case 4:
+			System.out.println("# 프로그램을 종료합니다.");
+			System.exit(0); /*프로그램 끝*/
+			break;
+		default:
+			/*사용자가 무엇을 잘못입력한거니*/
+			System.out.println("# 메뉴를 다시 입력하세요");
+		
+		
+		}
+		
+	}
+	
+}

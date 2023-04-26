@@ -1,0 +1,31 @@
+package com.java.user.domain;
+
+public class User {
+	/* 
+	   테이블이 가지고 있는 속성과 1:1로 매칭이 되도록 객체를 생성해서
+	   java와 DB 간의
+	   데이터를 주고받는 과정을 좀 더 쉽게 처리하기 위한 객체를 디자인 하도록 하겠다.
+	 */
+	
+	
+	/*멤버변수선언부터*/
+	private int userNumber;/*회원번호*/
+	private String userName;
+	private String phoneNumber;
+	private int totalPaying;/*결제금액*/
+	private Grade grade;
+	 /* 
+	   grade라는 변수의 타입을 int나 String이 아닌 Grade라는 것으로 잡았으니 
+	   Grade에 적힌 값 이외에는 들어 갈 수 없다. 
+	 */
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

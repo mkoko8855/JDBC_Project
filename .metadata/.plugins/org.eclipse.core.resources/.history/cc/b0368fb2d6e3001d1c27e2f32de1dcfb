@@ -1,0 +1,73 @@
+package com.java.user.service;
+
+import com.java.common.AppService;
+import com.java.view.AppUI;
+import static com.java.view.AppUI.*;
+public class UserService implements AppService {
+
+	/*인터페이스를 제작해서 처음 메뉴에 들어왔을 떄 start메뉴선언을 해서 일괄적으로(회원, 대여, 영화 관리든 모두 통일함) 제작.*/
+
+	
+	@Override
+	public void start() {
+		
+		while(true) {
+			/*회원 관리에 대한 메뉴부터 보여주고 나서 입력을 받아야 하니 AppUI로 가자
+			  가서 회원 관리 시스템 화면 출력을 작성해줬다. 이제 AppUI를 부르자
+			  import static com.java.view.AppUI.*; 하고 AppUI를 지워도됨~
+			 */
+			userManagementScreen();
+			
+			/*int selection = inputInteger();은 AppUI의 정수를 받기 위한 작업이다.*/
+			int selection = inputInteger();
+			
+			
+			
+			switch(selection) {
+			case 1:
+				join();
+				break;
+			case 2:
+				
+				break;
+			case 3:
+				
+				break;
+			case 4:
+				
+				return;
+			default:
+				System.out.println("메뉴를 다시 입력해주세요");
+			
+			}
+			
+			System.out.println("\n====== 계속 진행하시려면 ENTER를 누르세요 ======");
+			inputString();/*사용자가 엔터 친 값을 받을것이다.*/
+		}
+	}
+	
+	
+	
+	
+	
+	/*회원 추가 비즈니스 로직*/
+	/*외부에서는 이 메서드를 부를 필요가 없다. 이 안에서만 부른다 > 프라이빗으로.*/
+	private void join() { /*조인은 이 클래스 안에서 1번..을 누를때니까.*/
+		
+		System.out.println("\n====== 회원 가입을 진행합니다. ======");
+		System.out.print("# 회원명: ");
+		String name = inputString(); /*스캐너일일이 필요없지~ 스태틱으로 만들어놨으니까*/
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

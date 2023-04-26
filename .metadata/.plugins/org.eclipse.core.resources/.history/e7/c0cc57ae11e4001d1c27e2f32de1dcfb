@@ -1,0 +1,36 @@
+package com.java.order.repository;
+
+import java.sql.Connection;
+
+import com.java.common.DataBaseConnection;
+
+public class OrderRepository {
+
+	
+	/*데이터베이스 커넥션부터 만들어야겠지*/
+	private DataBaseConnection connection = DataBaseConnection.getInstance(); //를 통해 객체를 받아오자.
+
+	
+	
+	
+	public void addOrder(int movieNumber, int userNumber) {
+		String sql = "INSERT INTO order_history (order_no, user_number, serial_number) VALUES(order_seq.NEXTVAL, ?, ?)";		
+		
+		/*완성했으니 연동로직 ㄱㄱ*/
+		try(Connection conn = connection.getConnection();
+				PreparedStatement pstmt = conn.preparedStatement(sql));
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

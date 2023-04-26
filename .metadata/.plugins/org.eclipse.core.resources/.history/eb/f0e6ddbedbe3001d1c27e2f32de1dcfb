@@ -1,0 +1,14 @@
+package com.java.user.repository;
+
+import com.java.user.domain.User;
+
+public class UserRepository {
+
+	
+	public void addUser(User user) {
+		
+		
+		
+		
+	}
+}

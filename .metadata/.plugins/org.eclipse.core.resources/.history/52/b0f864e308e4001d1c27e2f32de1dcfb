@@ -1,0 +1,56 @@
+package com.java.order.service;
+
+import com.java.common.AppService;
+import static com.java.view.AppUI.*;
+public class OrderService implements AppService {
+
+	
+	
+	@Override
+	public void start() {
+		
+		orderManagementScreen();
+		int selection = inputInteger();
+		
+		switch (selection) {
+		case 1:
+			
+			break;
+
+		case 2:
+			
+			break;
+			
+		case 3:
+			
+			return;
+			
+		default:
+			System.out.println("메뉴를 다시 입력하세요.");
+		}
+		System.out.println("\n====== 계속 진행하시려면 ENTER를 누르세요 ======");
+		inputString();
+	}
+	
+	
+	/* DVD 대여 서비스 비즈니스 로직*/
+	private void processOrderDvd() {
+		/*안쪽에서 메뉴를 한번 더 제공하겠다*/
+		while(true) {
+			System.out.println("\n=============== 대여 관리 시스템을 실행합니다.");
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,116 @@
+package com.java.movie.service;
+
+import static com.java.view.AppUI.inputInteger;
+import static com.java.view.AppUI.inputString;
+import static com.java.view.AppUI.movieManagementScreen;
+
+import java.util.List;
+
+import com.java.common.AppService;
+import com.java.movie.domain.Movie;
+import com.java.movie.repository.MovieRepository;
+
+
+public class MovieService implements AppService {
+
+	private final MovieRepository movieRepository = new MovieRepository(); /*이 객체 이용해서 메서드를 호출하자. 아래로가자*/
+	
+	
+	
+	
+	
+	
+	/*오버라이드해야 빨간줄없어지니 그냥 컨트롤스페이스엔터~!*/
+	@Override
+	public void start() {
+		/*앱컨트롤러로가서 영화 관련된 메뉴를 사용자가 선택하면 무비서비스의 start가 발동되도록 처리하자*/
+	
+	
+	while(true) {
+		movieManagementScreen();
+		/*입력도받자*/
+		int selection = inputInteger();
+		
+		switch (selection) {
+		case 1:
+			insertMovieData();
+			break;
+
+		case 2:
+			
+			break;
+			
+		case 3:
+			return;
+			
+		default:
+			System.out.println("메뉴를 다시 입력하세요");
+		}
+		/*스위치문 끝나면 계속하시려면 엔터누르라했으니*/
+		System.out.println("\n====== 계속 진행하시려면 ENTER를 누르세요");
+		inputString();
+	}
+}
+	
+		
+	/*영화 정보 추가 비즈니스 로직*/
+	private void insertMovieData() {
+		System.out.println("\n======= 영화 DVD 정보를 추가합니다. =======");
+		System.out.print("# 영화명: ");
+		String movieName = inputString();
+		
+		System.out.println("# 국가명: ");
+		String nation = inputString();
+		
+		System.out.println("# 발매연도: ");
+		int pubYear = inputInteger();
+		
+		Movie newMovie = new Movie();
+		newMovie.setMovieName(movieName);
+		newMovie.setNation(nation);
+		newMovie.setPubYear(pubYear);
+		
+		movieRepository.addMovie(newMovie);
+	}
+	
+	
+	
+	/*스위치2번 > 영화 정보 검색 비즈니스 로직*/
+	private List<Movie> searchMovieData() {
+		System.out.println("\n=============== 영화 DVD 검색 조건을 선택하세요 ===============");
+		System.out.println("[ 1. 제목검색 | 2. 국가검색 | 3. 발매연도검색 | 4. 전체검색 ]");
+		System.out.print(">>> ");
+		int selection = inputInteger();
+		
+		switch (selection) { /*여기서 SQL을 만들고 메서드한테 보내줄 것이다. 레파지토리 쪽에는 커넥션과 prepared로 세팅만 해놓고 sql을 받아서 실행을 시켜주면 되잖아. 물음표 있으면 채워주고.*/
+		case 1:
+			System.out.println("\n### 제목으로 검색합니다.");
+			break;
+			
+		case 2:
+			System.out.println("\n### 제목으로 검색합니다.");
+			break;
+			
+		case 3:
+			System.out.println("\n### 제목으로 검색합니다.");
+			break;
+			
+		case 4:
+			break;
+			
+		default:
+			break;
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

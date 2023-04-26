@@ -1,0 +1,12 @@
+package com.java.movie.domain;
+
+public class Movie {
+
+	
+	private int serialNumber;
+	private String movieName;
+	
+	
+	
+	
+}

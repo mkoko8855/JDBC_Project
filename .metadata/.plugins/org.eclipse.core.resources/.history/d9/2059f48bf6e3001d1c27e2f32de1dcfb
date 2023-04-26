@@ -1,0 +1,23 @@
+package com.java.movie.service;
+
+import com.java.common.AppService;
+
+public class MovieService implements AppService {
+
+	
+	/*오버라이드해야 빨간줄없어지니 그냥 컨트롤스페이스엔터~!*/
+	@Override
+	public void start() {
+		/*앱컨트롤러로가서 영화 관련된 메뉴를 사용자가 선택하면 무비서비스의 start가 발동되도록 처리하자*/
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

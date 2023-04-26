@@ -1,0 +1,21 @@
+package com.java.user.service;
+
+import com.java.common.AppService;
+
+public class UserService implements AppService {
+
+	/*인터페이스를 제작해서 처음 메뉴에 들어왔을 떄 start메뉴선언을 해서 일괄적으로(회원, 대여, 영화 관리든 모두 통일함) 제작.*/
+
+	@Override
+	public void start() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+	
+	
+	
+	
+}

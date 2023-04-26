@@ -1,0 +1,5 @@
+package com.java.movie.repository;
+
+public class MovieRepository {
+
+}

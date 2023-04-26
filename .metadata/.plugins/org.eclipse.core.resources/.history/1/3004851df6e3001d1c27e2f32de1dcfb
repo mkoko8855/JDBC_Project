@@ -1,0 +1,23 @@
+package com.java.movie.service;
+
+import com.java.common.AppService;
+
+public class MovieService implements AppService {
+
+	
+	/*오버라이드해야 빨간줄없어지니 그냥 컨트롤스페이스엔터~!*/
+	@Override
+	public void start() {
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

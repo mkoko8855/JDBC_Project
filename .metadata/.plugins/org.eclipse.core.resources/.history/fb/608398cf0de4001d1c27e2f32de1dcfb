@@ -1,0 +1,102 @@
+package com.java.order.service;
+
+import static com.java.view.AppUI.inputInteger;
+import static com.java.view.AppUI.inputString;
+import static com.java.view.AppUI.orderManagementScreen;
+
+import java.util.List;
+
+import com.java.common.AppService;
+import com.java.movie.domain.Movie;
+import com.java.movie.repository.MovieRepository;
+public class OrderService implements AppService {
+
+	private final MovieRepository movieRepository = new MovieRepository();
+	
+	@Override
+	public void start() {
+		
+		orderManagementScreen();
+		int selection = inputInteger();
+		
+		switch (selection) {
+		case 1:
+			
+			break;
+
+		case 2:
+			
+			break;
+			
+		case 3:
+			
+			return;
+			
+		default:
+			System.out.println("메뉴를 다시 입력하세요.");
+		}
+		System.out.println("\n====== 계속 진행하시려면 ENTER를 누르세요 ======");
+		inputString();
+	}
+	
+	
+	/* DVD 대여 서비스 비즈니스 로직*/
+	private void processOrderDvd() {
+		/*안쪽에서 메뉴를 한번 더 제공하겠다*/
+		while(true) {
+			System.out.println("\n=============== 대여 관리 시스템을 실행합니다. ===============");
+			System.out.println("[ 1. 대여 가능 DVD 목록 보기 | 2. 대여중인 영화 반납예정일 확인 | 3. 이전으로 돌아가기 ]");
+			/*1번은 렌탈 값이 true인걸 가져오면 되는거지, 2번은 회원을 한명 선택을 해야겠지? 그 회원이 대여중인 영화가 어떤 것인지 파악하기 위해 번호를 알아야지. orderhistory테이블을 보면 user_number가 1번이야. 그럼 1번 회원이 어떤 영화를 빌렸는지 정보가 나와있잖아. 즉, return_date값을 조회하면되지.*/
+			System.out.println(">>> ");
+			int selection = inputInteger();
+			
+			switch (selection) {
+			case 1:
+				/*대여가능DVD목록보기*/
+				showRentalPossibleList();
+				break;
+			case 2:
+				
+				break;
+				
+			case 3:
+				return;
+				
+			default:
+				System.out.println("### 메뉴를 잘못 입력하셨습니다. ");
+			}
+		
+		
+		}
+	}
+
+
+	
+	
+	/* 대여 가능한 DVD 목록 보기 */
+	private void showRentalPossibleList() {
+		/*오버라이드 한 곳 위에서 변수선언해주자 파이널 ㄱㄱ*/
+		List<Movie> movieList = movieRepository.searchByRental("true"); /*문자열로 트루를 주자. 디비에서 때려야하니까*/
+		int count = movieList.size(); /*이걸로 미리 받아놓고 이걸로 사용해도 된다. 차곡차곡 쓸꺼면 변수선언해도된다.*/
+		
+		/*모든 영화가 다 대여중일수도있잖아..대여가능한 영화가 없습니다. 하고 끝내자.*/
+		if(count > 0) {
+		} else {
+			System.out.println("\n### 대여 가능한 DVD가 없습니다. ");
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

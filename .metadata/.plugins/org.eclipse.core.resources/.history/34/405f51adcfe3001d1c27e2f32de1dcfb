@@ -1,0 +1,21 @@
+package com.java.user.domain;
+
+public class User {
+	/* 
+	   테이블이 가지고 있는 속성과 1:1로 매칭이 되도록 객체를 생성해서
+	   java와 DB 간의
+	   데이터를 주고받는 과정을 좀 더 쉽게 처리하기 위한 객체를 디자인 하도록 하겠다.
+	 */
+	
+	
+	/*멤버변수선언부터*/
+	private int userNumber;
+	private String userName;
+	
+	
+	
+	
+	
+	
+	
+}

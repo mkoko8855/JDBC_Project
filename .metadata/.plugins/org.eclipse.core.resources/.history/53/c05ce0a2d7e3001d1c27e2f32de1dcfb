@@ -1,0 +1,10 @@
+package com.java.common;
+
+public class DataBaseConnection {
+
+	
+	/*여기다가 DB연동 다 쓸 것이다.*/
+	
+	
+	
+}

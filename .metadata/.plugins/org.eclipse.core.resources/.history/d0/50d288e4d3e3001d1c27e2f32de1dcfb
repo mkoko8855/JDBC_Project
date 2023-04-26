@@ -1,0 +1,11 @@
+package com.java.user.service;
+
+public class UserService {
+
+	/*인터페이스를 제작해서 처음 메뉴에 들어왔을 떄 start메뉴선언을 해서 일괄적으로(회원, 대여, 영화 관리든 모두 통일함)*/
+	
+	
+	
+	
+	
+}

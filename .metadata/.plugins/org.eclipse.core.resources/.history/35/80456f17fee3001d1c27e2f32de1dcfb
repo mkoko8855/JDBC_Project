@@ -1,0 +1,11 @@
+package com.java.common;
+
+public enum Condition {
+
+	/*영화를 검색할 때 사용할 조건에서 사용하는 컨디션 이넘(클래스)*/
+	PUB_YEAR,
+	NATION,
+	TITLE,
+	ALL
+	
+}

@@ -1,0 +1,14 @@
+package com.java.common;
+
+public class DataBaseConnection {
+
+	
+	/*여기다가 DB연동 다 쓸 것이다.*/
+	
+	
+	/*싱글톤 디자인 패턴으로 객체 하나 만들어서 다 돌려쓰면 편하겠지.*/
+	
+	
+	
+	
+}

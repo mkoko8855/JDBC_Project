@@ -1,0 +1,55 @@
+package com.java.movie.service;
+
+import com.java.common.AppService;
+import static com.java.view.AppUI.*;
+
+
+public class MovieService implements AppService {
+
+	
+	/*오버라이드해야 빨간줄없어지니 그냥 컨트롤스페이스엔터~!*/
+	@Override
+	public void start() {
+		/*앱컨트롤러로가서 영화 관련된 메뉴를 사용자가 선택하면 무비서비스의 start가 발동되도록 처리하자*/
+	
+	
+	while(true) {
+		movieManagementScreen();
+		/*입력도받자*/
+		int selection = inputInteger();
+		
+		switch (selection) {
+		case 1:
+			break;
+
+		case 2:
+			break;
+			
+		case 3:
+			return;
+			
+		default:
+			System.out.println("메뉴를 다시 입력하세요");
+		}
+		/*스위치문 끝나면 계속하시려면 엔터누르라했으니*/
+		System.out.println("\n====== 계속 진행하시려면 ENTER를 누르세요");
+		inputString();
+	}
+}
+	
+		
+	/*영화 정보 추가 비즈니스 로직*/
+	private void insertMovieData() {
+		System.out.println("\n======= 영화 DVD 정보를 추가합니다. =======");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

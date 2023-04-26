@@ -1,0 +1,11 @@
+package com.java.common;
+
+public enum Condition {
+
+	/*영화를 검색할 때 사용할 조건에서 사용함*/
+	
+	
+	
+	
+	
+}

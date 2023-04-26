@@ -1,0 +1,5 @@
+package com.java.movie.domain;
+
+public class Movie {
+
+}

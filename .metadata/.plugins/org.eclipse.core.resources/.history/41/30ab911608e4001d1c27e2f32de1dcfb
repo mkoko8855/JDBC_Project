@@ -1,0 +1,21 @@
+package com.java.order.service;
+
+import com.java.common.AppService;
+
+public class OrderService implements AppService {
+
+	@Override
+	public void start() {
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
